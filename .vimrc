@@ -8,7 +8,7 @@ function Install_go_maps()
 		map gd <Esc>:GoDef<CR>
 		map gb <Esc>:GoDefPop<CR>
 		map gi <Esc>:GoInstall<CR>
-		map gt <Esc>:GoTest<CR>
+		map gt <Esc>:GoCoverageToggle<CR>
 endfunction
 
 filetype off
