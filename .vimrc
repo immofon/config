@@ -1,21 +1,23 @@
 set nocompatible
 set nu
 set ts=4
+set ai sw=4
 imap jk <Esc>
 imap \t θ
 imap \a α
 imap \b β
 imap \pi π
+map mm <Esc>:!make<CR>
 
 
 autocmd Filetype go call Install_go_maps()
 function Install_go_maps()
-		map gd <Esc>:GoDef<CR>
-		map gb <Esc>:GoDefPop<CR>
-		map gi <Esc>:!cd .. && go install<CR><CR>
-		map gt <Esc>:GoTest<CR>
-		map gr <Esc>:GoRun<CR>
-		map gct <Esc>:GoCoverageToggle<CR>
+	map gd <Esc>:GoDef<CR>
+	map gb <Esc>:GoDefPop<CR>
+	map gi <Esc>:!cd .. && go install<CR><CR>
+	map gt <Esc>:GoTest<CR>
+	map gr <Esc>:GoRun<CR>
+	map gct <Esc>:GoCoverageToggle<CR>
 endfunction
 
 filetype off
@@ -37,6 +39,8 @@ Plugin 'w0rp/ale'
 Plugin 'vim-airline/vim-airline'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'Shougo/vimproc'
+
+Plugin 'honza/vim-snippets'
 
 au BufWrite * :Autoformat
 let g:airline#extensions#ale#enabled = 1
