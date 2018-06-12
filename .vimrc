@@ -28,26 +28,16 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'fatih/vim-go'
-Plugin 'SirVer/ultisnips'
-Plugin 'posva/vim-vue'
+
 Plugin 'Chiel92/vim-autoformat'
-
-
-Plugin 'mattn/emmet-vim'
-
-Plugin 'w0rp/ale'
-Plugin 'vim-airline/vim-airline'
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'Shougo/vimproc'
-
 Plugin 'honza/vim-snippets'
-
-au BufWrite * :Autoformat
-let g:airline#extensions#ale#enabled = 1
-
-nnoremap <Leader>ht :GhcModType<cr>
-nnoremap <Leader>htc :GhcModTypeClear<cr>
-autocmd FileType haskell nnoremap <buffer> <leader>? :call ale#cursor#ShowCursorDetail()<cr>
 
 call vundle#end()
 filetype plugin indent on
+
+" Plugin 'Chiel92/vim-autoformat'
+let b:formatdef_custom_c='"clang-format -style llvm"'
+let b:formatters_c = ['custom_c']
+au BufWrite * :Autoformat
+autocmd FileType vim,tex let b:autoformat_autoindent=0
+" End    'Chiel92/vim-autoformat'
