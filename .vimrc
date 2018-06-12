@@ -36,8 +36,7 @@ call vundle#end()
 filetype plugin indent on
 
 " Plugin 'Chiel92/vim-autoformat'
-let b:formatdef_custom_c='"clang-format -style llvm"'
-let b:formatters_c = ['custom_c']
+let b:formatdef_clangformat = "'clang-format -lines='.a:firstline.':'.a:lastline.' --assume-filename=\"'.expand('%:p').'\" -style=llvm'"
 au BufWrite * :Autoformat
 autocmd FileType vim,tex let b:autoformat_autoindent=0
 " End    'Chiel92/vim-autoformat'
