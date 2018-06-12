@@ -38,5 +38,5 @@ filetype plugin indent on
 " Plugin 'Chiel92/vim-autoformat'
 let b:formatdef_clangformat = "'clang-format -lines='.a:firstline.':'.a:lastline.' --assume-filename=\"'.expand('%:p').'\" -style=llvm'"
 au BufWrite * :Autoformat
-autocmd FileType vim,tex let b:autoformat_autoindent=0
+autocmd FileType vim,tex let b:autoformat_autoindent=0 " disable plugin
 " End    'Chiel92/vim-autoformat'
