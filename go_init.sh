@@ -17,8 +17,8 @@ function clone_x_all() {
 # begin
 cd $(go env GOPATH)
 
-mkdir -p src/golang/x/
-cd src/golang/x/
+mkdir -p src/golang.org/x/
+cd src/golang.org/x/
 
 packages="crypto net oauth2 vgo build tools sys mobile review net scratch debug exp image tour playground arch text perf lint time sync"
 
