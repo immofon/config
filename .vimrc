@@ -1,7 +1,7 @@
 set nocompatible
 set nu
-set ts=4
-set ai sw=4
+set ts=2
+set ai sw=2
 imap jk <Esc>
 imap \t θ
 imap \a α
@@ -32,11 +32,21 @@ Plugin 'fatih/vim-go'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'honza/vim-snippets'
 
+Plugin 'posva/vim-vue'
+
+Plugin 'mxw/vim-jsx'
+
 call vundle#end()
 filetype plugin indent on
 
 " Plugin 'Chiel92/vim-autoformat'
 let b:formatdef_clangformat = "'clang-format -lines='.a:firstline.':'.a:lastline.' --assume-filename=\"'.expand('%:p').'\" -style=llvm'"
 au BufWrite * :Autoformat
-autocmd FileType vim,tex let b:autoformat_autoindent=0 " disable plugin
+autocmd FileType vim,tex,vue,js let b:autoformat_autoindent=0 " disable plugin
 " End    'Chiel92/vim-autoformat'
+
+let g:go_version_warning = 0
+
+" vim-jsx
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+" vim-jsx END
