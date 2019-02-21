@@ -1,0 +1,58 @@
+snippet pkg "package" b
+package ${1:main}
+
+$0
+endsnippet
+
+snippet main "main func" b
+func main() {
+	${0:panic("todo")}
+}
+endsnippet
+
+snippet func "func" b
+func $1($2) ($3)  {
+	${0:panic("todo")}
+}
+endsnippet
+
+snippet lmd "lambda" w
+func ($1) {
+	${0:panic("todo")}
+}($2)
+endsnippet
+
+snippet forl "for" b
+for {
+	${0:panic("todo")}
+}
+endsnippet
+
+snippet fori "for with index"
+for i:=${1:0}; i < ${2};i++ {
+	${0:panic("todo")}
+}
+endsnippet
+
+snippet form "for map" b
+for k,v := range ${1} {
+	${0:panic("todo")}
+}
+endsnippet
+
+snippet mkm "make map" b
+${3:kv} := make(map[${1:string}]${2:string})
+$0
+endsnippet
+
+snippet mka "make array" b
+${4:array} := make([]${1:string},${2:0},${3:0})
+$0
+endsnippet
+
+snippet ap "append" b
+$1 = append($1,$2)
+$0
+endsnippet
+
+
