@@ -11,7 +11,7 @@ func main() {
 endsnippet
 
 snippet func "func" b
-func $1($2) ($3)  {
+func ${1:name}(${2:args}) ${3:rets} {
 	${0:panic("todo")}
 }
 endsnippet
@@ -22,6 +22,24 @@ func ($1) {
 }($2)
 endsnippet
 
+snippet if "if" b
+if ${1:false} {
+	$2
+} $0
+endsnippet
+
+snippet else "else" w
+else {
+	${0:panic("todo")}
+}
+endsnippet
+
+snippet elseif "else if" w
+else if ${1:false} {
+	$2
+} $0
+endsnippet
+
 snippet for "for" b
 for $1 {
 	${0:panic("todo")}
@@ -30,6 +48,12 @@ endsnippet
 
 snippet fori "for with index"
 for i:=${1:0}; i < ${2};i++ {
+	${0:panic("todo")}
+}
+endsnippet
+
+snippet fors "for slice" b
+for ${2:_},${3:v} := range ${1} {
 	${0:panic("todo")}
 }
 endsnippet
@@ -96,3 +120,26 @@ if err != nil {
 }
 $0
 endsnippet
+
+snippet assert "assert" b
+if !(${1:condition}) {
+	t.Error("assert failure:","$1")
+}
+$0
+endsnippet
+
+# lua
+snippet luaGF "lua go function" b
+func ${1}(L *lua.LState) int {
+	$0
+	return ${2:0}
+}
+endsnippet
+
+snippet luaGM "lua go method" b
+func (${1}) ${2:method_name}(L *lua.LState) int {
+	$0
+	return ${3:0}
+}
+endsnippet
+
