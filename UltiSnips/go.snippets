@@ -22,8 +22,8 @@ func ($1) {
 }($2)
 endsnippet
 
-snippet forl "for" b
-for {
+snippet for "for" b
+for $1 {
 	${0:panic("todo")}
 }
 endsnippet
@@ -55,4 +55,44 @@ $1 = append($1,$2)
 $0
 endsnippet
 
+snippet select "select" b
+select {
+	$0
+}
+endsnippet
 
+snippet case "case" b
+case $1:
+	$0
+endsnippet
+
+snippet dft "default" b
+default:
+	$0
+endsnippet
+
+snippet default "default" b
+default:
+	$0
+endsnippet
+
+snippet err "err" b
+if err != nil {
+	${1: return err}
+}
+$0
+endsnippet
+
+snippet errp "error panic" b
+if err != nil {
+	panic(err)
+}
+$0
+endsnippet
+
+snippet errt "error test" b
+if err != nil {
+	t.Error(err)
+}
+$0
+endsnippet
