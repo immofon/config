@@ -1,20 +1,22 @@
 set nocompatible
+syntax on
 set nu
 set ts=2
 set ai sw=2
 imap jk <Esc>
-imap \t θ
-imap \a α
-imap \b β
-imap \pi π
 map mm <Esc>:!make<CR>
 
+" recover input position
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
 
 autocmd Filetype go call Install_go_maps()
 function Install_go_maps()
 	map gd <Esc>:GoDef<CR>
 	map gb <Esc>:GoDefPop<CR>
-	map gi <Esc>:!cd .. && go install<CR><CR>
+	map gi <Esc>:GoImports<CR>
 	map gt <Esc>:GoTest<CR>
 	map gr <Esc>:GoRun<CR>
 	map gct <Esc>:GoCoverageToggle<CR>
@@ -30,7 +32,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'fatih/vim-go'
 
 Plugin 'Chiel92/vim-autoformat'
-Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
 
 Plugin 'posva/vim-vue'
 
@@ -42,10 +44,14 @@ filetype plugin indent on
 " Plugin 'Chiel92/vim-autoformat'
 let b:formatdef_clangformat = "'clang-format -lines='.a:firstline.':'.a:lastline.' --assume-filename=\"'.expand('%:p').'\" -style=llvm'"
 au BufWrite * :Autoformat
-autocmd FileType vim,tex,vue,js let b:autoformat_autoindent=0 " disable plugin
+autocmd FileType vim,tex,vue,js,snippets let b:autoformat_autoindent=0 " disable plugin
 " End    'Chiel92/vim-autoformat'
 
 let g:go_version_warning = 0
+
+" snippets
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<S-tab>"
 
 " vim-jsx
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
