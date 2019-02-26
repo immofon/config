@@ -16,7 +16,7 @@ autocmd Filetype go call Install_go_maps()
 function Install_go_maps()
 	map gd <Esc>:GoDef<CR>
 	map gb <Esc>:GoDefPop<CR>
-	map gi <Esc>:GoImports<CR>
+	map gi <Esc>:GoInstall<CR>
 	map gt <Esc>:GoTest<CR>
 	map gr <Esc>:GoRun<CR>
 	map gct <Esc>:GoCoverageToggle<CR>
