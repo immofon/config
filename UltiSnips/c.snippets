@@ -1,0 +1,19 @@
+snippet main "main" b
+int main(int argc, char* argv[]) {
+	${0: printf("ok\n");}
+	return 0;
+}
+endsnippet
+
+snippet #io "#io" b
+#include <stdio.h>
+endsnippet
+
+snippet #lib "#lib" b
+#include <stdlib.h>
+endsnippet
+
+snippet #// "#comment" b
+/* $1 */
+$0
+endsnippet
