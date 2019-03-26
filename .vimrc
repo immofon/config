@@ -22,6 +22,13 @@ function Install_go_maps()
 	map gct <Esc>:GoCoverageToggle<CR>
 endfunction
 
+autocmd Filetype julia call Install_julia_maps()
+function Install_julia_maps()
+	map gr <Esc>:! julia m.jl<CR>
+endfunction
+
+
+
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -37,6 +44,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'posva/vim-vue'
 
 Plugin 'mxw/vim-jsx'
+
+Plugin 'JuliaEditorSupport/julia-vim'
 
 call vundle#end()
 filetype plugin indent on
