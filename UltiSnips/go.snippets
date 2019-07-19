@@ -159,3 +159,9 @@ func (${1}) ${2:method_name}(L *lua.LState) int {
 }
 endsnippet
 
+snippet lock "lock" b
+$1.Lock()
+defer $1.Unlock()
+
+$0
+endsnippet

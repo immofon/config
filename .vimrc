@@ -53,7 +53,7 @@ filetype plugin indent on
 " Plugin 'Chiel92/vim-autoformat'
 let b:formatdef_clangformat = "'clang-format -lines='.a:firstline.':'.a:lastline.' --assume-filename=\"'.expand('%:p').'\" -style=llvm'"
 au BufWrite * :Autoformat
-autocmd FileType vim,tex,vue,js,snippets let b:autoformat_autoindent=0 " disable plugin
+autocmd FileType vim,vue,js,snippets let b:autoformat_autoindent=0 " disable plugin
 " End    'Chiel92/vim-autoformat'
 
 let g:go_version_warning = 0

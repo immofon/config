@@ -1,3 +1,25 @@
+snippet #doc "#doc" w
+\documentclass\{article\}
+\usepackage\{xeCJK\}
+\setCJKmainfont\{PingFangSC-Regular\}
+\usepackage\{relsize\}
+\usepackage\{amssymb\}
+\usepackage\{amsmath\}
+\usepackage\{extarrows\}
+
+
+\title\{$1\}
+\author\{${2:杨景荣}\}
+\date\{\today\}
+
+
+\begin\{document\}
+\maketitle
+
+$0
+\end\{document\}
+endsnippet
+
 snippet equation "equation" w
 \begin {equation}
 	$0
@@ -10,6 +32,10 @@ endsnippet
 
 snippet [ "equation" w
 \[ $1 \] $0
+endsnippet
+
+snippet { "{}" w
+\\{ $1 \\} $0
 endsnippet
 
 snippet => "=>" w
@@ -34,4 +60,12 @@ endsnippet
 
 snippet / "frac" w
 \frac{${1:1}}{$2} $0
+endsnippet
+
+snippet : ":" w
+\colon $0
+endsnippet
+
+snippet | "|" w
+\mid $0
 endsnippet
