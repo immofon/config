@@ -6,6 +6,13 @@ snippet #doc "#doc" w
 \usepackage\{amssymb\}
 \usepackage\{amsmath\}
 \usepackage\{extarrows\}
+\usepackage\{verbatim\} % \begin{comment} \end{comment} For long comment.
+
+\newcommand\{\image\}[1]\{\begin\{figure\}
+	\includegraphics[width=\linewidth]\{#1\}
+\end\{figure\}\}
+
+
 
 
 \title\{$1\}
@@ -21,9 +28,19 @@ $0
 endsnippet
 
 snippet equation "equation" w
-\begin {equation}
+\begin{equation}
 	$0
-\end {equation}
+\end{equation}
+endsnippet
+
+snippet #b "begin..end" b
+\begin{$1}
+	$0
+\end{$1}
+endsnippet
+
+snippet #s "section" b
+\section{$1}$0
 endsnippet
 
 snippet $ "equation" w
@@ -62,10 +79,30 @@ snippet / "frac" w
 \frac{${1:1}}{$2} $0
 endsnippet
 
+snippet \\ "\\" w
+\textbackslash
+endsnippet
+
 snippet : ":" w
 \colon $0
 endsnippet
 
 snippet | "|" w
 \mid $0
+endsnippet
+
+snippet #case "#case" b
+\begin{Target}
+$0
+\end{Target}
+\begin{Algorithm}
+\begin{lstlisting}
+
+\end{lstlisting}
+\end{Algorithm}
+\begin{Result}
+\begin{lstlisting}
+
+\end{lstlisting}
+\end{Result}
 endsnippet
