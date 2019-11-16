@@ -39,7 +39,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'fatih/vim-go'
 
 Plugin 'Chiel92/vim-autoformat'
-Plugin 'SirVer/ultisnips'
+"Plugin 'SirVer/ultisnips'
 
 Plugin 'posva/vim-vue'
 
