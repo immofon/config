@@ -3,8 +3,9 @@ syntax on
 set nu
 set ts=2
 set ai sw=2
+set viminfo='20,<1000
 imap jk <Esc>
-map mm <Esc>:!make<CR>
+map mk <Esc>:!make<CR>
 
 " recover input position
 autocmd BufReadPost *
@@ -47,6 +48,8 @@ Plugin 'mxw/vim-jsx'
 
 Plugin 'JuliaEditorSupport/julia-vim'
 
+Plugin 'lervag/vimtex'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -65,3 +68,12 @@ let g:UltiSnipsJumpBackwardTrigger = "<S-tab>"
 " vim-jsx
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 " vim-jsx END
+
+" lervag/vimtex
+autocmd Filetype tex call Install_latex_maps()
+let g:vimtex_latexmk_options='-pdf -pdflatex="xelatex -synctex=1 \%S \%O" -file-line-error -interaction=nonstopmode'
+let g:tex_flavor='latex'
+function Install_latex_maps()
+	map mm <Esc>:VimtexCompile<CR>
+endfunction
+" lervag/vimtex END
