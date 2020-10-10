@@ -6,6 +6,7 @@ set ai sw=2
 set viminfo='20,<1000
 imap jk <Esc>
 map mk <Esc>:!make<CR>
+map mc <Esc>:!make clean<CR>
 
 " recover input position
 autocmd BufReadPost *
