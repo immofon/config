@@ -4,6 +4,32 @@ package ${1:main}
 $0
 endsnippet
 
+snippet m[si "map[string]interface{}" w
+map[string]interface{} {
+	$0
+}
+endsnippet
+
+snippet [i "[]interface{}" w
+[]interface{} {
+	$0
+} 
+endsnippet
+
+snippet testcases "testcases" b
+func Test_${1:Cases}(t *testing.T) {
+	testcases := []struct {
+		$2
+	}{
+		{$0},
+	}
+
+	for i,tc := range testcases {
+		$3
+	}
+}
+endsnippet
+
 snippet main "main func" b
 func main() {
 	${0:panic("todo")}

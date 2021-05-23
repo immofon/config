@@ -13,12 +13,9 @@ snippet #doc "#doc" w
 \end\{figure\}\}
 
 
-
-
 \title\{$1\}
 \author\{${2:杨景荣}\}
 \date\{\today\}
-
 
 \begin\{document\}
 \maketitle
@@ -27,16 +24,22 @@ $0
 \end\{document\}
 endsnippet
 
-snippet equation "equation" w
+snippet #eq "equation" w
 \begin{equation}
 	$0
 \end{equation}
 endsnippet
 
-snippet #b "begin..end" b
-\begin{$1}
+snippet #frame "slide frame" b
+\begin{frame}{$1}
 	$0
-\end{$1}
+\end{frame}
+endsnippet
+
+snippet --- "slide frame" b
+\begin{frame}{$1}
+	$0
+\end{frame}
 endsnippet
 
 snippet #s "section" b
@@ -71,7 +74,7 @@ endsnippet
 
 snippet begin "begin" w
 \begin{$1}
-$0
+	$0
 \end{$1}
 endsnippet
 
@@ -91,18 +94,14 @@ snippet | "|" w
 \mid $0
 endsnippet
 
-snippet #case "#case" b
-\begin{Target}
-$0
-\end{Target}
-\begin{Algorithm}
-\begin{lstlisting}
+snippet enum "enum" b
+\begin{enumerate}
+	\item $0
+\end{enumerate}
+endsnippet
 
-\end{lstlisting}
-\end{Algorithm}
-\begin{Result}
-\begin{lstlisting}
-
-\end{lstlisting}
-\end{Result}
+snippet item "item" b
+\begin{itemize}
+	\item $0
+\end{itemize}
 endsnippet
