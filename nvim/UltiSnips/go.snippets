@@ -1,0 +1,7 @@
+snippet method "method" b
+s.AddMethod("$1", Checks{
+	$2
+},func(s *Server, r Req) Resp {
+	$0
+})
+endsnippet

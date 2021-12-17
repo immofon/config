@@ -1,0 +1,51 @@
+snippet main "main" b
+int main(int argc, char* argv[]) {
+	$0
+	;
+	return 0;
+}
+endsnippet
+
+snippet #i "#include" b
+#include <$0>
+endsnippet
+
+snippet #iv "#include <vector>" b
+#include <vector>
+endsnippet
+
+snippet #is "#include <string>" b
+#include <string>
+endsnippet
+
+snippet #ia "#include <array>" b
+#include <array>
+endsnippet
+
+snippet #io "#include <iostream>" b
+#include <iostream>
+endsnippet
+
+snippet lmauto "lambda" w
+[ $1 ]( $2 ){ $0 };
+endsnippet
+
+snippet lm "lambda" w
+[ $1 ]( $2 ) -> $3 {$0};
+endsnippet
+
+snippet fori "fori" b
+for(int i = 0; i < $1; ${2: i++}) {
+	$0
+}
+endsnippet
+
+snippet for "for" b
+for( $1 ) {
+	$0
+}
+endsnippet
+
+snippet std "std" w
+std::$0
+endsnippet

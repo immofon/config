@@ -130,12 +130,21 @@ snippet \\ "\\" w
 \textbackslash
 endsnippet
 
-snippet : ":" w
-\colon $0
+snippet : "label" w
+\label{$1} $0
 endsnippet
 
-snippet | "|" w
-\mid $0
+snippet @ "ref" w
+\ref{$1} $0
+endsnippet
+
+snippet defop "decl" b
+\DeclareMathOperator{\\$1}{$1}
+$0
+endsnippet
+
+snippet def "def" b
+\def\\$1{$0}
 endsnippet
 
 snippet enum "enum" b
@@ -148,4 +157,10 @@ snippet item "item" b
 \begin{itemize}
 	\item $0
 \end{itemize}
+endsnippet
+
+snippet code "code" b
+\begin{lstlisting}[language=C]
+$0
+\end{lstlisting}
 endsnippet
