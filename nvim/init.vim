@@ -28,8 +28,7 @@ let g:vimtex_view_skim_sync = 1 " Value 1 allows forward search after every succ
 let g:vimtex_view_skim_activate = 1 " Value 1 allows change focus to skim after command `:VimtexView` is given
 let g:vimtex_quickfix_mode=0
 let g:vimtex_view_skim_reading_bar = 1
-let g:vimtex_view_automatic = 0
-
+let g:vimtex_view_automatic = 1
 "LaTeX end
 
 "neoformat begin
