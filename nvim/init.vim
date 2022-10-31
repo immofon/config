@@ -22,7 +22,14 @@ let g:EasyMotion_smartcase = 1
 "vim-easymotion
 
 "LaTeX begin
-let g:tex_flavor = 'latex'
+let g:tex_flavor='latex' " Default tex file format
+let g:vimtex_view_method = 'skim' " Choose which program to use to view PDF file 
+let g:vimtex_view_skim_sync = 1 " Value 1 allows forward search after every successful compilation
+let g:vimtex_view_skim_activate = 1 " Value 1 allows change focus to skim after command `:VimtexView` is given
+let g:vimtex_quickfix_mode=0
+let g:vimtex_view_skim_reading_bar = 1
+let g:vimtex_view_automatic = 0
+
 "LaTeX end
 
 "neoformat begin
