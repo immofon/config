@@ -10,10 +10,16 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'SirVer/ultisnips'
 Plug 'sbdchd/neoformat'
 Plug 'kassio/neoterm'
-Plug 'phaazon/hop.nvim'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 filetype plugin indent on
+
+"vim-easymotion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+nmap s <Plug>(easymotion-overwin-f2)
+let g:EasyMotion_smartcase = 1
+"vim-easymotion
 
 "LaTeX begin
 let g:tex_flavor = 'latex'
