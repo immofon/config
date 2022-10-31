@@ -10,6 +10,7 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'SirVer/ultisnips'
 Plug 'sbdchd/neoformat'
 Plug 'kassio/neoterm'
+Plug 'phaazon/hop.nvim'
 call plug#end()
 
 filetype plugin indent on
