@@ -17,7 +17,7 @@ filetype plugin indent on
 
 "vim-easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
-nmap s <Plug>(easymotion-overwin-f2)
+nmap <Space> <Plug>(easymotion-overwin-f2)
 let g:EasyMotion_smartcase = 1
 "vim-easymotion
 
