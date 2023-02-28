@@ -2,6 +2,19 @@
 "let &packpath = &runtimepath
 "source ~/.vimrc
 
+
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'fatih/vim-go', { 'tag': '*' }
+Plug 'lervag/vimtex'
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'SirVer/ultisnips'
+Plug 'sbdchd/neoformat'
+Plug 'kassio/neoterm'
+Plug 'easymotion/vim-easymotion'
+call plug#end()
+
+
 set nocompatible
 syntax on
 set nu
@@ -23,18 +36,6 @@ autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
-
-
-call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
-Plug 'fatih/vim-go', { 'tag': '*' }
-Plug 'lervag/vimtex'
-Plug 'JuliaEditorSupport/julia-vim'
-Plug 'SirVer/ultisnips'
-Plug 'sbdchd/neoformat'
-Plug 'kassio/neoterm'
-Plug 'easymotion/vim-easymotion'
-call plug#end()
 
 filetype plugin indent on
 
@@ -74,7 +75,6 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 let g:UltiSnipsEditSplit="horizontal"
 
 imap :wq <esc>:wq<Enter>
-cmap sedit UltiSnipsEdit
 " UltiSnips end
 
 " go begin
