@@ -60,10 +60,10 @@ let g:vimtex_view_automatic = 1
 "LaTeX end
 
 "neoformat begin
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
+"augroup fmt
+"  autocmd!
+"  autocmd BufWritePre * undojoin | Neoformat
+"augroup END
 "neoformat end 
 
 " UltiSnips begin
@@ -80,8 +80,12 @@ imap :wq <esc>:wq<Enter>
 " go begin
 au FileType go nmap gt <esc>:GoTest<Enter>
 au FileType go nmap gi <esc>:GoInstall<Enter>
+au FileType go nmap gb <esc>:GoDefPop<Enter>
+au FileType go nmap gd <esc>:GoDef<Enter>
 " go end
 
+au FileType tex map vc <Esc>:w<CR>:VimtexCompileSS<CR><CR>
+au FileType tex map vv <Esc>:VimtexView<CR><CR>
 
 set clipboard+=unnamedplus
 set guicursor=a:block
