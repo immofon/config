@@ -8,8 +8,7 @@
 
 # Machine name.
 function box_name {
-#    [ -f ~/.box-name ] && cat ~/.box-name || echo $HOST
-	echo z4
+    [ -f ~/.box-name ] && cat ~/.box-name || echo $HOST
 }
 
 # Directory info.
