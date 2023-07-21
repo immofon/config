@@ -12,3 +12,7 @@ ln -s $(pwd)/nvim ~/.config/nvim
 # on-my-zsh
 rm -rf ~/.oh-my-zsh/custom/themes/xxf.zsh-theme
 ln -s $(pwd)/xxf.zsh-theme ~/.oh-my-zsh/custom/themes
+
+
+rm -rf ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone git@github.com:zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
