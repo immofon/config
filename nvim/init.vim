@@ -11,9 +11,8 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'SirVer/ultisnips'
 Plug 'sbdchd/neoformat'
 Plug 'kassio/neoterm'
-Plug 'easymotion/vim-easymotion'
+Plug 'phaazon/hop.nvim'
 call plug#end()
-
 
 set nocompatible
 syntax on
@@ -39,15 +38,11 @@ autocmd BufReadPost *
 
 filetype plugin indent on
 
-"nvim-theme
-"nvim-theme
+"hop.nvim
+:lua require'hop'.setup()
+nmap <Space> :HopWordMW<CR>
+"hop.nvim
 
-
-"vim-easymotion
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-nmap <Space> <Plug>(easymotion-overwin-f2)
-let g:EasyMotion_smartcase = 1
-"vim-easymotion
 
 "LaTeX begin
 let g:tex_flavor='latex' " Default tex file format
