@@ -51,9 +51,11 @@ nmap t :HopWordMW<CR>
 nmap <Space> :HopChar2MW<CR>
 "hop.nvim
 
+" numToStr/FTerm.nvim
 nmap jt :lua require("FTerm").toggle()<CR>
 tmap jt <C-\><C-n>:lua require("FTerm").toggle()<CR>
 tmap jk <C-\><C-n>:lua require("FTerm").toggle()<CR>
+" numToStr/FTerm.nvim
 
 "LaTeX begin
 let g:tex_flavor='latex' " Default tex file format
