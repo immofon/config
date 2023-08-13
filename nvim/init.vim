@@ -12,16 +12,22 @@ Plug 'SirVer/ultisnips'
 Plug 'sbdchd/neoformat'
 Plug 'kassio/neoterm'
 Plug 'phaazon/hop.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'numToStr/FTerm.nvim'
 call plug#end()
 
 set nocompatible
 syntax on
 set nu
+autocmd TermOpen * setlocal nonumber norelativenumber
+autocmd TermOpen * startinsert
+autocmd BufWinEnter,WinEnter term://* startinsert
 set ts=2
 set ai sw=2
 set viminfo='20,<1000
 set display+=lastline
 imap jk <Esc>
+tmap jk <C-\><C-N>
 map mk <Esc>:w<CR>:!make<CR><CR>
 map mc <Esc>:!make clean<CR>
 " Set utf8 as standard encoding and en_US as the standard language
@@ -40,9 +46,14 @@ filetype plugin indent on
 
 "hop.nvim
 :lua require'hop'.setup()
-nmap <Space> :HopWordMW<CR>
+nmap f :HopChar1CurrentLine<CR>
+nmap t :HopWordMW<CR>
+nmap <Space> :HopChar2MW<CR>
 "hop.nvim
 
+nmap jt :lua require("FTerm").toggle()<CR>
+tmap jt <C-\><C-n>:lua require("FTerm").toggle()<CR>
+tmap jk <C-\><C-n>:lua require("FTerm").toggle()<CR>
 
 "LaTeX begin
 let g:tex_flavor='latex' " Default tex file format
