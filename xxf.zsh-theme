@@ -55,7 +55,7 @@ PROMPT="
 ${hg_info}\
 ${git_info} 
 %{$fg[red]%}%*\
-%{$terminfo[bold]$fg[white]%}› %{$reset_color%}"
+%{$terminfo[bold]$fg[white]%} λ %{$reset_color%}"
 
 # ${git_last_commit}
 
@@ -70,5 +70,5 @@ PROMPT="
 %{$terminfo[bold]$fg[yellow]%}[${current_dir}]%{$reset_color%}\
 ${hg_info}\
 ${git_info}
-%{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
+%{$terminfo[bold]$fg[red]%} $ %{$reset_color%}"
 fi
