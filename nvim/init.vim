@@ -12,7 +12,6 @@ Plug 'SirVer/ultisnips'
 Plug 'sbdchd/neoformat'
 Plug 'kassio/neoterm'
 Plug 'phaazon/hop.nvim'
-Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'numToStr/FTerm.nvim'
 call plug#end()
 
@@ -27,7 +26,7 @@ set ai sw=2
 set viminfo='20,<1000
 set display+=lastline
 imap jk <Esc>
-tmap jk <C-\><C-N>
+"tmap jk <C-\><C-N>
 map mk <Esc>:w<CR>:!make<CR><CR>
 map mc <Esc>:!make clean<CR>
 " Set utf8 as standard encoding and en_US as the standard language
@@ -52,8 +51,8 @@ nmap <Space> :HopChar2MW<CR>
 "hop.nvim
 
 " numToStr/FTerm.nvim
-nmap jt :lua require("FTerm").toggle()<CR>
-tmap jt <C-\><C-n>:lua require("FTerm").toggle()<CR>
+nmap wt :lua require("FTerm").toggle()<CR>
+tmap wt <C-\><C-n>:lua require("FTerm").toggle()<CR>
 tmap jk <C-\><C-n>:lua require("FTerm").toggle()<CR>
 " numToStr/FTerm.nvim
 
@@ -85,12 +84,22 @@ let g:UltiSnipsEditSplit="horizontal"
 imap :wq <esc>:wq<Enter>
 " UltiSnips end
 
+" julia begin
+au FileType julia nnoremap wr <esc>:lua require("FTerm").toggle()<CR><Up><CR>
+au FileType julia tmap wr <C-\><C-n>:lua require("FTerm").toggle()<CR>
+" julia end
+
 " go begin
 au FileType go nmap gt <esc>:GoTest<Enter>
 au FileType go nmap gi <esc>:GoInstall<Enter>
 au FileType go nmap gb <esc>:GoDefPop<Enter>
 au FileType go nmap gd <esc>:GoDef<Enter>
 " go end
+
+
+au FileType vim nmap PI <esc>:PlugInstall<Enter>
+au FileType vim nmap PU <esc>:PlugUpdate<Enter>
+au FileType vim nmap PUg <esc>:PlugInstall<Enter>
 
 au FileType tex map vc <Esc>:w<CR>:VimtexCompileSS<CR><CR>
 au FileType tex map vv <Esc>:VimtexView<CR><CR>
