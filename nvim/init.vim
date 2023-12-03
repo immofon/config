@@ -26,7 +26,7 @@ set ai sw=2
 set viminfo='20,<1000
 set display+=lastline
 imap jk <Esc>
-"tmap jk <C-\><C-N>
+tmap jk <C-\><C-N>
 map mk <Esc>:w<CR>:!make<CR><CR>
 map mc <Esc>:!make clean<CR>
 " Set utf8 as standard encoding and en_US as the standard language
@@ -51,9 +51,8 @@ nmap <Space> :HopChar2MW<CR>
 "hop.nvim
 
 " numToStr/FTerm.nvim
-nmap wt :lua require("FTerm").toggle()<CR>
-tmap wt <C-\><C-n>:lua require("FTerm").toggle()<CR>
-tmap jk <C-\><C-n>:lua require("FTerm").toggle()<CR>
+nmap wj :lua require("FTerm").toggle()<CR>
+tmap wj <C-\><C-n>:lua require("FTerm").toggle()<CR>
 " numToStr/FTerm.nvim
 
 "LaTeX begin
@@ -84,10 +83,10 @@ let g:UltiSnipsEditSplit="horizontal"
 imap :wq <esc>:wq<Enter>
 " UltiSnips end
 
-" julia begin
-au FileType julia nnoremap wr <esc>:lua require("FTerm").toggle()<CR><Up><CR>
-au FileType julia tmap wr <C-\><C-n>:lua require("FTerm").toggle()<CR>
-" julia end
+" Fterm 
+nnoremap wk <esc>:lua require("FTerm").toggle()<CR><Up><CR>
+tmap wk <C-\><C-n>:lua require("FTerm").toggle()<CR>
+" Fterm 
 
 " go begin
 au FileType go nmap gt <esc>:GoTest<Enter>
