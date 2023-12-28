@@ -12,6 +12,7 @@ ln -s $(pwd)/nvim ~/.config/nvim
 # tmux and tpm
 rm -rf ~/.tmux.conf
 ln -s  $(pwd)/.tmux.conf ~/.tmux.conf
+tmux source ~/.tmux.conf
 
 rm -rf ~/.tmux/plugins/tpm
 mkdir -p ~/.tmux/plugins
