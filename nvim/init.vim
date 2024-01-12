@@ -101,6 +101,9 @@ au FileType go nmap gb <esc>:GoDefPop<Enter>
 au FileType go nmap gd <esc>:GoDef<Enter>
 " go end
 
+" julia BEGIN
+au FileType julia set foldmethod=syntax
+" julia END
 
 au FileType vim nmap PI <esc>:PlugInstall<Enter>
 au FileType vim nmap PU <esc>:PlugUpdate<Enter>
