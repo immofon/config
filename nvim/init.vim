@@ -13,7 +13,7 @@ Plug 'sbdchd/neoformat'
 Plug 'kassio/neoterm'
 Plug 'phaazon/hop.nvim'
 Plug 'numToStr/FTerm.nvim'
-Plug 'savq/melange-nvim'
+Plug 'kepano/flexoki-neovim'
 call plug#end()
 
 set nocompatible
@@ -51,10 +51,10 @@ nmap t :HopWordMW<CR>
 nmap <Space> :HopChar2MW<CR>
 "hop.nvim
 
-" savq/melange-nvim
+" kepano/flexoki-neovim
 set termguicolors
-colorscheme melange
-" savq/melange-nvim
+colorscheme flexoki-light
+" kepano/flexoki-neovim
 
 " numToStr/FTerm.nvim
 nmap wj :lua require("FTerm").toggle()<CR>
