@@ -2,7 +2,7 @@
 # Clean, simple, compatible and meaningful.
 # Tested on Linux, Unix and Windows under ANSI colors.
 # It is recommended to use with a dark background and the font Inconsolata.
-# Colors: black, red, green, yellow, *blue, magenta, cyan, and white.
+# Colors: black, red, green, yellow, *blue, magenta, cyan, and 19.
 # http://xiaofan.at
 # 2 Jul 2015 - Xiaofan
 
@@ -15,7 +15,7 @@ function box_name {
 local current_dir='${PWD/#$HOME/~}'
 
 # VCS
-YS_VCS_PROMPT_PREFIX1="%{$fg[white]%}on%{$reset_color%} "
+YS_VCS_PROMPT_PREFIX1="%{$fg[19]%}on%{$reset_color%} "
 YS_VCS_PROMPT_PREFIX2=":%{$fg[cyan]%}"
 YS_VCS_PROMPT_SUFFIX="%{$reset_color%} "
 YS_VCS_PROMPT_DIRTY=" %{$fg[red]%}✗"
@@ -48,14 +48,14 @@ ys_hg_prompt_info() {
 # Prompt format: \n # TIME USER at MACHINE in [DIRECTORY] on git:BRANCH STATE \n $ 
 PROMPT="
 %{$fg[cyan]%}%n \
-%{$fg[white]%}@ \
+%{$fg[19]%}@ \
 %{$fg[green]%}$(box_name) \
-%{$fg[white]%}in \
-%{$terminfo[bold]$fg[white]%}[${current_dir}]%{$reset_color%} \
+%{$fg[19]%}in \
+%{$terminfo[bold]$fg[19]%}[${current_dir}]%{$reset_color%} \
 ${hg_info}\
 ${git_info} 
 %{$fg[red]%}%*\
-%{$terminfo[bold]$fg[white]%} λ %{$reset_color%}"
+%{$terminfo[bold]$fg[19]%} λ %{$reset_color%}"
 
 # ${git_last_commit}
 
@@ -64,9 +64,9 @@ PROMPT="
 %{$fg[red]%}%* \
 %{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
 %{$fg[cyan]%}%n%{$reset_color%} \
-%{$fg[white]%}at \
+%{$fg[19]%}at \
 %{$fg[green]%}$(box_name) \
-%{$fg[white]%}in \
+%{$fg[19]%}in \
 %{$terminfo[bold]$fg[yellow]%}[${current_dir}]%{$reset_color%}\
 ${hg_info}\
 ${git_info}

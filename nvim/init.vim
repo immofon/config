@@ -13,6 +13,7 @@ Plug 'sbdchd/neoformat'
 Plug 'kassio/neoterm'
 Plug 'phaazon/hop.nvim'
 Plug 'numToStr/FTerm.nvim'
+Plug 'savq/melange-nvim'
 call plug#end()
 
 set nocompatible
@@ -49,6 +50,11 @@ nmap f :HopChar1CurrentLine<CR>
 nmap t :HopWordMW<CR>
 nmap <Space> :HopChar2MW<CR>
 "hop.nvim
+
+" savq/melange-nvim
+set termguicolors
+colorscheme melange
+" savq/melange-nvim
 
 " numToStr/FTerm.nvim
 nmap wj :lua require("FTerm").toggle()<CR>
@@ -108,7 +114,7 @@ set guicursor=a:block
 set cursorline
 
 syntax enable
-set background=dark
+set background=light
 
 " General
 set number  " Show line numbers
@@ -143,4 +149,4 @@ set backspace=indent,eol,start  " Backspace behaviour
 
 set mouse=a " activate mouse
 
-set statusline+=%F
+set statusline+=%F 
