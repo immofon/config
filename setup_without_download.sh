@@ -14,6 +14,10 @@ rm -rf ~/.tmux.conf
 ln -s  $(pwd)/.tmux.conf ~/.tmux.conf
 tmux source ~/.tmux.conf
 
+rm -rf ~/.tmux/flexoki-light.tmuxtheme
+ln -s $(pwd)/flexoki-light.tmuxtheme ~/.tmux/flexoki-light.tmuxtheme
+tmux source ~/.tmux/flexoki-light.tmuxtheme
+
 # on-my-zsh
 rm -rf ~/.oh-my-zsh/custom/themes/xxf.zsh-theme
 ln -s $(pwd)/xxf.zsh-theme ~/.oh-my-zsh/custom/themes
