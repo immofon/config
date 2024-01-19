@@ -94,11 +94,19 @@ nnoremap wk <esc>:lua require("FTerm").toggle()<CR><Up><CR>
 tmap wk <C-\><C-n>:lua require("FTerm").toggle()<CR>
 " Fterm 
 
+" Fold BEIGN
+nnoremap zj <esc>:foldo!<Enter>
+nnoremap zk <esc>:foldc!<Enter>
+nnoremap zu <esc>:%foldo!<Enter>
+nnoremap zi <esc>:%foldc!<Enter>
+" Fold END
+
 " go begin
 au FileType go nmap gt <esc>:GoTest<Enter>
 au FileType go nmap gi <esc>:GoInstall<Enter>
 au FileType go nmap gb <esc>:GoDefPop<Enter>
 au FileType go nmap gd <esc>:GoDef<Enter>
+let g:go_fmt_command = "goimports" " auto-import used but unimported package
 " go end
 
 " julia BEGIN
